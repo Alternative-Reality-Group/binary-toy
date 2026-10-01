@@ -1,6 +1,7 @@
 import './App.css';
 import BitInteraction from './components/BitInteraction';
 function App() {
+  const year = new Date().getFullYear();
   return (
     <div className="App">
       <header>
@@ -9,7 +10,7 @@ function App() {
       </header>
       <BitInteraction />
       <footer>
-        <p>Created by Jim Kass / <a href="https://github.com/filmjbrandon/binary-toy">Link to github</a></p>
+        <p>© {year} <a href="https://alternativereality.com">Alternative Reality Group</a>. All rights reserved.</p>
       </footer>
     </div>
   );

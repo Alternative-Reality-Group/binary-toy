@@ -20,3 +20,11 @@ test('App renders BitInteraction', () => {
 test('BitInteraction is visible in DOM', () => {
   expect(interaction).toBeVisible();
 });
+
+test('Footer shows Alternative Reality Group copyright', () => {
+  const year = new Date().getFullYear();
+  const footer = screen.getByRole('contentinfo');
+  expect(footer).toHaveTextContent(`© ${year} Alternative Reality Group. All rights reserved.`);
+  const link = screen.getByRole('link', { name: 'Alternative Reality Group' });
+  expect(link).toHaveAttribute('href', 'https://alternativereality.com');
+});
